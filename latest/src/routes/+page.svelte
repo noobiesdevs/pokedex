@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import Cards from "./cards.svelte";
+</script>
+
+<h1>Pokedex</h1>
+<main class="wrapper">
+  <Cards />
+  <Cards />
+  <Cards />
+  <Cards />
+  <Cards />
+</main>
+
+<style>
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    justify-content: space-between;
+  }
+</style>
