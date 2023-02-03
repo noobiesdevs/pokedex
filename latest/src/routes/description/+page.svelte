@@ -17,8 +17,6 @@
         </select>
       </div>
     </div>
-    
-    <div class="carrouselName" />
   </header>
   <div class="topContainer">
     <div class="containerleft" />
