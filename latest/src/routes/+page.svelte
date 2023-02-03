@@ -3,7 +3,7 @@
 </script>
 
 <h1>Pokedex</h1>
-<a href="/about">About</a>
+<a href="/description">About</a>
 <main class="wrapper">
   <Cards />
   <Cards />
