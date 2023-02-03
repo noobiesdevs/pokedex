@@ -38,7 +38,7 @@
         </div>
       </div>
     <div class="containerRight" />
-      <img src="" alt="">
+      <img src="/assets/001.png" alt="">
   </div>
   <div class="bottomContainer">
     <div class="title">
