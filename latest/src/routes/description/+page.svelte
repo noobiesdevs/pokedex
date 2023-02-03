@@ -1,14 +1,14 @@
-<tempalte>
+
 <div class="wrapper">
   <header>
     <div class="filter"></div>
     <div class="carrouselName"></div>
   </header>
-  <div class="topWrapper">
-    <div class="wrapperleft"></div>
-    <div class="wrapperRight"></div>
+  <div class="topContainer">
+    <div class="containerleft"></div>
+    <div class="containerRight"></div>
   </div>
-  <div class="bottomWrapper">
+  <div class="bottomContainer">
     <div class="title">
       <h2>Stats</h2>
     </div>
@@ -49,6 +49,14 @@
 
 
 </div>
-</tempalte>
+
+
 <script></script>
-<style></style>
+<style>
+  .wrapper {
+    background-color: #32a852;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+  }
+</style>
