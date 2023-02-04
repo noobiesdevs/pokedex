@@ -6,7 +6,7 @@
     <div class="headerComponents">
       <div class="searchBar">
         <div class="searchText">
-          <input  type="text" value="..." />
+          <input type="text" placeholder="Rechercher un Pokemon" />
           <div class="searchImage">test</div>
         </div>
       </div>
@@ -20,25 +20,25 @@
   </header>
   <div class="topContainer">
     <div class="containerleft" />
-      <div class="gridInfo">
-        <div class="infoType"><img src="" alt=""></div>
-        <div class="infoName">
-          <div class="infoTypeName">Herbe</div>
-          <div class="infoPokemonName">Bulbizarre</div>
-        </div>
-        <div class="statName">
-          <div>Taille</div>
-          <div>Poid</div>
-          <div>Compétence</div>
-        </div>
-        <div class="statValue">
-          <div>0.7M</div>
-          <div>6.9Kg</div>
-          <div>Overgrow</div>
-        </div>
+    <div class="gridInfo">
+      <div class="infoType"><img src="" alt="" /></div>
+      <div class="infoName">
+        <div class="infoTypeName">Herbe</div>
+        <div class="infoPokemonName">Bulbizarre</div>
       </div>
+      <div class="statName">
+        <div>Taille</div>
+        <div>Poid</div>
+        <div>Compétence</div>
+      </div>
+      <div class="statValue">
+        <div>0.7M</div>
+        <div>6.9Kg</div>
+        <div>Overgrow</div>
+      </div>
+    </div>
     <div class="containerRight" />
-      <img src="/assets/001.png" alt="">
+    <img src="/assets/001.png" alt="" />
   </div>
   <div class="bottomContainer">
     <div class="title">
@@ -99,6 +99,14 @@
     width: 50px;
     height: auto;
   } */
+
+  input {
+    background-image: url(assets/icon/search.svg);
+    background-position: calc(100% - 10px) 50%; /* première valeur permet de positionner l'image a droite - 10px, la deuxieme permet de centrer verticalement */
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding-right: 30px;
+  }
   .title {
     color: white;
   }
@@ -118,5 +126,4 @@
     flex-direction: row;
     justify-content: space-between;
   }
-
 </style>
