@@ -1,7 +1,9 @@
 <script>
-</script>
+  export let link = '';
+  console.log(link);
+</script> 
 
-<a href="">
+<a href='${link}'>
   <div class="cards">
     <figure>
       <img src="/assets/001.png" alt="name_pokemon" />

@@ -5,11 +5,11 @@
 <h1>Pokedex</h1>
 <a href="/description">About</a>
 <main class="wrapper">
-  <Cards />
-  <Cards />
-  <Cards />
-  <Cards />
-  <Cards />
+  <Cards link="/description"/>
+  <Cards link="/description"/>
+  <Cards link="/description"/>
+  <Cards link="/description"/>
+  <Cards link="/description"/>
 </main>
 
 <style>
