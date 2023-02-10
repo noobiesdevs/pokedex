@@ -1,7 +1,5 @@
 <script>
-  export let link = '';
-  console.log(link);
-</script> 
+</script>
 
 <a href='{link}'>
   <div class="cards">
