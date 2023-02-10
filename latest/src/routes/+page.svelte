@@ -5,7 +5,7 @@
 <h1>Pokedex</h1>
 <a href="/description">About</a>
 <main class="wrapper">
-  <Cards />
+  <Cards link="/description"/>
   <Cards />
   <Cards />
   <Cards />
