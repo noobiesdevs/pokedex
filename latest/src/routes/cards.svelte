@@ -1,4 +1,6 @@
 <script>
+  export let link="";
+  export let pokemon_Name="";
 </script>
 
 <a href='{link}'>
@@ -7,7 +9,7 @@
       <img src="/assets/001.png" alt="name_pokemon" />
       <figcaption class="cards__caption">#xxx</figcaption>
     </figure>
-    <h class="cards__title">name_pokemon</h  >
+    <h class="cards__title">{pokemon_Name}</h  >
     <span class="cards__type">type</span>
   </div>
 </a>
