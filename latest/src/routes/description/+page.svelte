@@ -1,5 +1,4 @@
 <script>
-  
 </script>
 
 <div class="wrapper">
@@ -82,7 +81,6 @@
 </div>
 
 <style>
-  
   :global(.test) {
     color: white;
     font-size: 1.2rem;

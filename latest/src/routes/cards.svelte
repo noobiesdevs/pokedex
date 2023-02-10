@@ -3,13 +3,13 @@
   console.log(link);
 </script> 
 
-<a href='${link}'>
+<a href='{link}'>
   <div class="cards">
     <figure>
       <img src="/assets/001.png" alt="name_pokemon" />
       <figcaption class="cards__caption">#xxx</figcaption>
     </figure>
-    <h2 class="cards__title">name_pokemon</h2>
+    <h class="cards__title">name_pokemon</h  >
     <span class="cards__type">type</span>
   </div>
 </a>
