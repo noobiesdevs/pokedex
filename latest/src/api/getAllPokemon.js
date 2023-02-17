@@ -1,8 +1,10 @@
+let result;
+
 const fetchPokemons = () => {
-  return fetch('https://pokeapi.co/api/v2/pokemon/?limit=1279')
+  return fetch('https://pokeapi.co/api/v2/pokemon/?limit=5')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      result= data;
       return data;
     })
     .catch(error => console.error(error));
