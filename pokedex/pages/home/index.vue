@@ -1,6 +1,5 @@
 <template>
-    <div>
-        
+    <div  v-for="n in 10">
         <cards-pokemon/>
     </div>
 </template>
