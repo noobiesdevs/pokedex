@@ -1,60 +1,70 @@
 <template>
-<a href='{link}'>
-  <div class="cards">
-    <figure>
-      <img src="../../assets/img/pokemon/001.png" alt="name_pokemon" />
-      <figcaption class="cards__caption">#xxx</figcaption>
-    </figure>
-    <h2 class="cards__title">{{ name }}</h2 >
-    <span class="cards__type">type</span>
-  </div>
-</a>
+  <a href='{link}'>
+    <div class="cards">
+      <figure>
+        <img src="../../assets/img/pokemon/001.png" alt="name_pokemon" />
+        <figcaption class="cards__caption">#xxx</figcaption>
+      </figure>
+      <h2 class="cards__title">{{ name }}</h2>
+      <p>{{ url }}</p>
+      <span class="cards__type">type</span>
+    </div>
+  </a>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
 
 const props = defineProps({
-  name: String,
-  default: ''
+  name: {
+    type: String,
+    default: ""
+  },
+  url: {
+    type: String,
+    default: ""
+  }
+
 });
+
+
 </script>
 
 <style scoped>
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 300px);
-    justify-content: space-between;
-  }
+a {
+  color: black;
+  text-decoration: none;
+}
 
-  .cards__caption {
-    color: grey;
-  }
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  justify-content: space-between;
+}
 
-  .cards {
-    margin: 10px;
-    padding-bottom: 10px;
-    border: 1px solid black;
-  }
+.cards__caption {
+  color: grey;
+}
 
-  .cards__type {
-    padding: 2px 20px;
-    border-radius: 4px;
-  }
+.cards {
+  margin: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+}
 
-  .cards__title {
-    padding: 2px 20px;
-  }
+.cards__type {
+  padding: 2px 20px;
+  border-radius: 4px;
+}
 
-  .card__type--feu {
-    background-color: red;
-  }
+.cards__title {
+  padding: 2px 20px;
+}
 
-  .card__type--eau {
-    background-color: blue;
-  }
+.card__type--feu {
+  background-color: red;
+}
+
+.card__type--eau {
+  background-color: blue;
+}
 </style>
