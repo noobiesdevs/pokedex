@@ -12,6 +12,44 @@
 </template>
 
 <script setup lang='ts'>
+//   let result;
+//   let tablePokemon = [];
+//   function fetchPokemons() {
+//     return fetch('https://pokeapi.co/api/v2/pokemon/?limit=5')
+//     .then(response => response.json())
+//     .then(data => {
+//       result = data;
+//       tablePokemon = data.results;
+
+//       return data;
+//     })
+//     .catch(error => console.error(error))
+//   }
+
+
+//   let pokemons = fetchPokemons();
+//   let test;
+//   async function getPokemonName() {
+//     try {
+//       test = await pokemons
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   }
+
+// getPokemonName().then(() => {
+//   for (let i=0; i < 5; i++) {
+//     let name = test.results[i].name;
+//     console.log("name : " + name)
+//   }
+// })
+
+
+  // for (let index = 0; index < tablePokemon.length; index++) {
+  //   let name = tablePokemon[index].name;
+  //   console.log(name);
+  // }
+
   
 </script>
 

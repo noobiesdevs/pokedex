@@ -6,6 +6,6 @@
 
 <style>
   *{
-    background-color: #0B090B;
+    background-color: grey;
   }
 </style>
