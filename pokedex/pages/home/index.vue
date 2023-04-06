@@ -1,28 +1,26 @@
 <template>
   <div v-for="n in tablePokemon">
-    <cards-pokemon />
+    <cards-pokemon :name ="test"/>
   </div>
 </template>
 
 <script lang="ts" setup>
   let result;
-  let tablePokemon = [];
+  let tablePokemon = ref([]);
   
-  function fetchPokemons() {
-    return fetch('https://pokeapi.co/api/v2/pokemon/?limit=5')
-    .then(response => response.json())
-    .then(data => {
-      result = data;
-      tablePokemon = data.results;
-
-      return data;
-    })
-    .catch(error => console.error(error))
+ async function fetchPokemons() {
+  try {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=25');
+    const data = await response.json();
+    tablePokemon.value = data.results;
+    console.log("value : " + tablePokemon.value[3].name)
+  } catch (error) {
+    console.error(error);
   }
+}
 
-
+ let test = "coucou"
   let pokemons = fetchPokemons();
-  let test;
   let name;
   async function getPokemonName() {
     try {
@@ -32,13 +30,15 @@
     }
   }
 
-getPokemonName().then(() => {
-  tablePokemon = test.results
-  for (let i=0; i < 5; i++) {
-    name = test.results[i].name;
-    console.log("name : " + name)
-  }
-})
+  console.log("table : " + tablePokemon.value[3].name);
+  
+// getPokemonName().then(() => {
+//   tablePokemon = test.results
+//   for (let i=0; i < 5; i++) {
+//     name = test.results[i].name;
+//     console.log("name : " + name)
+//   }
+// })
 </script>
 
 <style scoped>

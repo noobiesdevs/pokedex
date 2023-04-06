@@ -5,52 +5,19 @@
       <img src="../../assets/img/pokemon/001.png" alt="name_pokemon" />
       <figcaption class="cards__caption">#xxx</figcaption>
     </figure>
-    <h2 class="cards__title">{pokemon_Name}</h2 >
+    <h2 class="cards__title">{{ name }}</h2 >
     <span class="cards__type">type</span>
   </div>
 </a>
 </template>
 
-<script setup lang='ts'>
-//   let result;
-//   let tablePokemon = [];
-//   function fetchPokemons() {
-//     return fetch('https://pokeapi.co/api/v2/pokemon/?limit=5')
-//     .then(response => response.json())
-//     .then(data => {
-//       result = data;
-//       tablePokemon = data.results;
+<script setup lang="ts">
+import { defineProps } from 'vue';
 
-//       return data;
-//     })
-//     .catch(error => console.error(error))
-//   }
-
-
-//   let pokemons = fetchPokemons();
-//   let test;
-//   async function getPokemonName() {
-//     try {
-//       test = await pokemons
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   }
-
-// getPokemonName().then(() => {
-//   for (let i=0; i < 5; i++) {
-//     let name = test.results[i].name;
-//     console.log("name : " + name)
-//   }
-// })
-
-
-  // for (let index = 0; index < tablePokemon.length; index++) {
-  //   let name = tablePokemon[index].name;
-  //   console.log(name);
-  // }
-
-  
+const props = defineProps({
+  name: String,
+  default: ''
+});
 </script>
 
 <style scoped>
