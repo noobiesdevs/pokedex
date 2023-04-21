@@ -3,7 +3,7 @@
     <div class="cards">
       <figure>
         <img src="../../assets/img/pokemon/001.png" alt="name_pokemon" />
-        <figcaption class="cards__caption">#xxx</figcaption>
+        <figcaption class="cards__caption">#{{ indexLenght }}</figcaption>
       </figure>
       <h2 class="cards__title">{{ name }}</h2>
       <p>{{ url }}</p>
@@ -22,11 +22,23 @@ const props = defineProps({
   url: {
     type: String,
     default: ""
+  },
+  index: {
+    type: Number,
+    default: 0
   }
 
 });
 
-
+// Formatage de l'index des pokemon
+let indexLenght = ""
+if (props.index < 10) {
+  indexLenght = "00" + props.index
+} else if (props.index < 100) {
+  indexLenght = "0" + props.index
+} else {
+  indexLenght = props.index.toString()
+}
 </script>
 
 <style scoped>
@@ -42,7 +54,7 @@ a {
 }
 
 .cards__caption {
-  color: grey;
+  color: gray;
 }
 
 .cards {
