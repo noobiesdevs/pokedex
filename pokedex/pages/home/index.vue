@@ -1,7 +1,7 @@
 <template>
-    <div v-for="(pokemon, i) in tablePokemon" :key="i">
+    <NuxtLink v-for="(pokemon, i) in tablePokemon" :key="i" :to="'/description/'+i">
         <cards-pokemon :name="pokemon.name" :url="pokemon.url" :index="i+1"/>
-    </div>
+    </NuxtLink>
 </template>
 
 <script lang="ts" setup>
@@ -22,15 +22,15 @@ async function fetchPokemons() {
     try {
         const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=25');
         const data = await response.json();
-        tablePokemon.value = data.results;
-        console.log(tablePokemon.value);
-        
+        tablePokemon.value = data.results;        
     } catch (error) {
         console.error(error);
     }
 }
 
 let pokemons = fetchPokemons();
+
+
 </script>
 
 <style scoped>

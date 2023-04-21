@@ -1,15 +1,15 @@
 <template>
-  <a href='{link}'>
-    <div class="cards">
-      <figure>
-        <img src="../../assets/img/pokemon/001.png" alt="name_pokemon" />
-        <figcaption class="cards__caption">#{{ indexLenght }}</figcaption>
-      </figure>
-      <h2 class="cards__title">{{ name }}</h2>
-      <p>{{ url }}</p>
-      <span class="cards__type">type</span>
-    </div>
-  </a>
+  <div class="cards">
+    <figure>
+      <img src="../../assets/img/pokemon/001.png" alt="name_pokemon" />
+      <figcaption class="cards__caption">#{{ indexLenght }}</figcaption>
+    </figure>
+    <h2 class="cards__title">{{ name }}</h2>
+  </div>
+  <!-- 
+    <div v-for="(pokemon, i) in tablePokemon" :key="i">
+        {{ pokemon.name}}
+    </div> -->
 </template>
 
 <script setup lang="ts">
@@ -39,6 +39,33 @@ if (props.index < 10) {
 } else {
   indexLenght = props.index.toString()
 }
+
+
+interface Pokemon {
+  name: string;
+  url: string;
+}
+
+let tablePokemon = ref<Pokemon[]>([]);
+// <===============
+// let tablePokemon = ref([]);
+
+async function fetchPokemons() {
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${props.index}`);
+
+    const data = await response.json();
+
+    tablePokemon.value = data.forms;
+    return tablePokemon.value
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+let pokemons = fetchPokemons();
+
+
 </script>
 
 <style scoped>
