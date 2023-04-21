@@ -2,6 +2,7 @@
   {{ tablePokemon.name }}
   {{ tablePokemon.height }}m
   {{ tablePokemon.weight }}kg
+  {{ tablePokemon.weight }}kg
 </template>
 
 <script lang="ts" setup>
@@ -58,9 +59,9 @@ async function fetchPokemons() {
     tablePokemon.value.name = data.forms[0].name
     tablePokemon.value.height = data.height/10
     tablePokemon.value.weight = data.weight/10
-    console.log(data);
+    console.log("data API", data);
     
-    console.log(tablePokemon.value);
+    console.log("Variable tablePokemon", tablePokemon.value);
     
   } catch (error) {
     console.error(error)
