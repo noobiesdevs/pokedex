@@ -4,8 +4,9 @@
   </div>
 </template>
 
+<script>
+import '@/assets/css/styles.css';
+</script>
+
 <style>
-  *{
-    background-color: rgb(194, 191, 191);
-  }
 </style>
