@@ -1,5 +1,5 @@
 <template>
-<img class="artwork" :src="{{ tablePokemon.sprite }}" alt="pokemon-artwork"/>
+<img class="artwork" :src="tablePokemon.sprite" alt="pokemon-artwork"/>
   {{ tablePokemon.name }}
   {{ tablePokemon.height }} m
   {{ tablePokemon.weight }} kg
