@@ -1,8 +1,15 @@
 <template>
+<img class="artwork" :src="{{ tablePokemon.sprite }}" alt="pokemon-artwork"/>
   {{ tablePokemon.name }}
-  {{ tablePokemon.height }}m
-  {{ tablePokemon.weight }}kg
-  {{ tablePokemon.weight }}kg
+  {{ tablePokemon.height }} m
+  {{ tablePokemon.weight }} kg
+  {{ tablePokemon.hp }} hp 
+  {{ tablePokemon.attack }} attack 
+  {{ tablePokemon.defense }} defense 
+  {{ tablePokemon.specialAttack }} special-attack 
+  {{ tablePokemon.specialDefense }} special-defense 
+  {{ tablePokemon.speed }} speed 
+  
 </template>
 
 <script lang="ts" setup>
@@ -59,6 +66,15 @@ async function fetchPokemons() {
     tablePokemon.value.name = data.forms[0].name
     tablePokemon.value.height = data.height/10
     tablePokemon.value.weight = data.weight/10
+    tablePokemon.value.ability = data.ability
+    tablePokemon.value.hp = data.stats[0].base_stat
+    tablePokemon.value.attack = data.stats[1].base_stat
+    tablePokemon.value.defense = data.stats[2].base_stat
+    tablePokemon.value.specialAttack = data.stats[3].base_stat
+    tablePokemon.value.specialDefense = data.stats[4].base_stat
+    tablePokemon.value.speed = data.stats[5].base_stat
+    tablePokemon.value.sprite = data.sprites.other.dream_world.front_default
+    
     console.log("data API", data);
     
     console.log("Variable tablePokemon", tablePokemon.value);
@@ -69,7 +85,6 @@ async function fetchPokemons() {
 }
 
 const pokemons = fetchPokemons()
-
 </script> 
 
 <style scoped>
