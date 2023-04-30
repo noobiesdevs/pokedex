@@ -5,7 +5,8 @@
 </template>
 
 <style>
-  *{
-    background-color: rgb(194, 191, 191);
-  }
+  @import "assets/css/style.css";
 </style>
+
+<script>
+</script>

@@ -6,10 +6,6 @@
     </figure>
     <h2 class="cards__title">{{ name }}</h2>
   </div>
-  <!-- 
-    <div v-for="(pokemon, i) in tablePokemon" :key="i">
-        {{ pokemon.name}}
-    </div> -->
 </template>
 
 <script setup lang="ts">

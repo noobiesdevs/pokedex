@@ -15,8 +15,6 @@ interface Pokemon {
 }
 
 let tablePokemon = ref<Pokemon[]>([]);
-// <===============
-// let tablePokemon = ref([]);
 
 async function fetchPokemons() {
     try {

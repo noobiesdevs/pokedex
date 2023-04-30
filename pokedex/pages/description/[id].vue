@@ -132,7 +132,6 @@ const pokemons = fetchPokemons()
 </script> 
 
 <style scoped>
-
 .highSection {  display: grid;
   grid-template-columns: 0.5fr 0.5fr 1fr;
   grid-template-rows: 1fr 1fr;

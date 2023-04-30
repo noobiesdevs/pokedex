@@ -1,5 +1,5 @@
 <template>
-  <div>Coucou je suis la page index</div>
+Coucou je suis la page index
 </template>
 
 <script setup lang='ts'>
@@ -7,7 +7,5 @@
 </script>
 
 <style>
-  *{
-    background-color: black;
-  }
+
 </style>
