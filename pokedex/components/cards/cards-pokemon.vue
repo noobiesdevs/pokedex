@@ -1,15 +1,15 @@
 <template>
   <div class="cards">
     <figure>
-      <img src="../../assets/img/pokemon/001.png" alt="name_pokemon" />
-      <figcaption class="cards__caption">#{{ indexLenght }}</figcaption>
+      <img :src="tablePokemon.sprite" alt="name_pokemon" width="100" height="100" />
+      <figcaption class="cards__caption">#{{ tablePokemon.id }}</figcaption>
     </figure>
-    <h2 class="cards__title">{{ name }}</h2>
+    <h2 class="cards__title">{{ tablePokemon.name }}</h2>
+    <p v-for="typePokemon in tablePokemon.type">{{ typePokemon.type.name }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-
 const props = defineProps({
   name: {
     type: String,
@@ -42,26 +42,57 @@ interface Pokemon {
   url: string;
 }
 
-let tablePokemon = ref<Pokemon[]>([]);
-// <===============
-// let tablePokemon = ref([]);
+interface Pokemon {
+  name: string;
+  height: number;
+  weight: number;
+  ability: string;
+  hp: number;
+  attack: number;
+  defense: number;
+  specialAttack: number;
+  specialDefense: number;
+  speed: number;
+  sprite: string;
+}
+
+let tablePokemon = ref<Pokemon>({ 
+  name: '',
+  height: 0,
+  weight: 0,
+  ability: '',
+  hp: 0,
+  attack: 0,
+  defense: 0,
+  specialAttack: 0,
+  specialDefense: 0,
+  speed: 0,
+  sprite: '',
+  type: ''
+
+});
 
 async function fetchPokemons() {
   try {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${props.index}`);
-
-    const data = await response.json();
-
-    tablePokemon.value = data.forms;
-    return tablePokemon.value
-
+    const response = await fetch(`${props.url}`)
+    const data = await response.json()
+    tablePokemon.value.name = data.forms[0].name
+    tablePokemon.value.type = data.types
+    tablePokemon.value.id = data.id
+    tablePokemon.value.sprite = data.sprites.other.dream_world.front_default
+        
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
 }
-let pokemons = fetchPokemons();
 
-
+watch(
+  () => props.url,
+  () => {
+    fetchPokemons()
+  },
+  { immediate: true }
+)
 </script>
 
 <style scoped>
@@ -82,8 +113,10 @@ a {
 
 .cards {
   margin: 10px;
-  padding-bottom: 10px;
   border: 1px solid black;
+  padding: 10px;
+  display: inline-block;
+  width: 10%;
 }
 
 .cards__type {

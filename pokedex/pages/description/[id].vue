@@ -101,7 +101,6 @@ watch(
   { immediate: true }
 )
 
-console.log(index);
 
 async function fetchPokemons() {
   try {
@@ -119,14 +118,11 @@ async function fetchPokemons() {
     tablePokemon.value.speed = data.stats[5].base_stat
     tablePokemon.value.sprite = data.sprites.other.dream_world.front_default
     tablePokemon.value.type = data.types[0].type.name
-    console.log("type",tablePokemon.value.type);
 
     document.body.className = "";
     document.body.classList.add(tablePokemon.value.type + '-type');
  
-    console.log("data API", data);
     
-    console.log("Variable tablePokemon", tablePokemon.value);
     
   } catch (error) {
     console.error(error)
