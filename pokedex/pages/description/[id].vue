@@ -6,7 +6,7 @@
   </div>
 
   <div class="divHeader">
-    <img src="/pokedex/assets/img/type/Grass.webp" height="128">
+    <img src="../../assets/img/type/grass.svg" height="30">
     <label class="typePokemon">{{ tablePokemon.type }}</label>
     <h1 class="pokemonName">{{ tablePokemon.name }}</h1>
   </div>
