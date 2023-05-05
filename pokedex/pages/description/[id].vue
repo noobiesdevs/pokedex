@@ -119,7 +119,11 @@ async function fetchPokemons() {
     tablePokemon.value.speed = data.stats[5].base_stat
     tablePokemon.value.sprite = data.sprites.other.dream_world.front_default
     tablePokemon.value.type = data.types[0].type.name
-    
+    console.log("type",tablePokemon.value.type);
+
+    document.body.className = "";
+    document.body.classList.add(tablePokemon.value.type + '-type');
+ 
     console.log("data API", data);
     
     console.log("Variable tablePokemon", tablePokemon.value);
@@ -130,6 +134,10 @@ async function fetchPokemons() {
 }
 
 const pokemons = fetchPokemons()
+
+
+
+
 </script> 
 
 <style scoped>
@@ -209,9 +217,5 @@ ul {
   font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   color: white;
-}
-
-body {
-  background: linear-gradient(#e66465, #9198e5);
 }
 </style>

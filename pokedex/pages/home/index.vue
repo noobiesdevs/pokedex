@@ -18,7 +18,7 @@ let tablePokemon = ref<Pokemon[]>([]);
 
 async function fetchPokemons() {
     try {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=25');
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=151');
         const data = await response.json();
         tablePokemon.value = data.results;        
     } catch (error) {

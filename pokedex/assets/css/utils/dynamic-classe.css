@@ -1,0 +1,7 @@
+.grass-type {
+  background: linear-gradient(var(--green-light), var(--green-dark));
+}
+
+.fire-type {
+  background: linear-gradient(#f7b5b0, #961304);
+}

@@ -4,9 +4,9 @@
 </template>
 
 <script setup lang='ts'>
-  
+  // Votre code TypeScript ici
 </script>
 
-<style>
-
+<style lang="css">
+/* Votre code CSS ici */
 </style>
