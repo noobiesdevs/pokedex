@@ -6,7 +6,7 @@
   </div>
 
   <div class="divHeader">
-    <img src="../../assets/img/type/grass.svg" height="30">
+    <img :src="`../../_nuxt/assets/img/type/${tablePokemon.type}.svg`" height="30">
     <label class="typePokemon">{{ tablePokemon.type }}</label>
     <h1 class="pokemonName">{{ tablePokemon.name }}</h1>
   </div>
@@ -41,11 +41,11 @@
   <div class="headerStats">
     <ul>
       <li> <Stats nameStat="Hp" :value="tablePokemon.hp"/></li>
-       <li> <Stats nameStat="Attack" :value="tablePokemon.attack"/></li>
-        <li> <Stats nameStat="Defense" :value="tablePokemon.defense"/></li>
-         <li> <Stats nameStat="Special-attack" :value="tablePokemon.specialAttack"/></li>
-          <li> <Stats nameStat="Special-defense" :value="tablePokemon.specialDefense"/></li>
-           <li> <Stats nameStat="Speed" :value="tablePokemon.speed"/></li>
+      <li> <Stats nameStat="Attack" :value="tablePokemon.attack"/></li>
+      <li> <Stats nameStat="Defense" :value="tablePokemon.defense"/></li>
+      <li> <Stats nameStat="Special-attack" :value="tablePokemon.specialAttack"/></li>
+      <li> <Stats nameStat="Special-defense" :value="tablePokemon.specialDefense"/></li>
+      <li> <Stats nameStat="Speed" :value="tablePokemon.speed"/></li>
     </ul>
   </div>
 </section>
