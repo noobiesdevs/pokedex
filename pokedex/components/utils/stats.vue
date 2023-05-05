@@ -42,4 +42,13 @@ const props = defineProps({
   width: 25%;
 }
 
+.numericValue {
+  padding-right: 20px;
+}
+
+.statParent {
+  font-family: "Century Gothic", sans-serif;
+  padding-left: 5px;
+  color: white;
+}
 </style>

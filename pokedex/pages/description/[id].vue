@@ -6,6 +6,7 @@
   </div>
 
   <div class="divHeader">
+    <img src="/pokedex/assets/img/type/Grass.webp" height="128">
     <label class="typePokemon">{{ tablePokemon.type }}</label>
     <h1 class="pokemonName">{{ tablePokemon.name }}</h1>
   </div>
@@ -20,9 +21,9 @@
 
   <div class="divStats">
     <ul>
-      <li>{{ tablePokemon.height }} m</li>
-      <li>{{ tablePokemon.weight }} kg</li>
-      <li> {{ tablePokemon.ability }}</li>
+      <li class="heightValue">{{ tablePokemon.height }} m</li>
+      <li class="weightValue">{{ tablePokemon.weight }} kg</li>
+      <li class="abilityValue"> {{ tablePokemon.ability }}</li>
     </ul>
       
   </div>
@@ -39,12 +40,12 @@
   </div>
   <div class="headerStats">
     <ul>
-      <li> <Stats nameStat="Hp" :value="tablePokemon.hp"/> </li>
-       <li> <Stats nameStat="Attack" :value="tablePokemon.attack"/> </li>
-        <li> <Stats nameStat="Defense" :value="tablePokemon.defense"/> </li>
-         <li> <Stats nameStat="Special-attack" :value="tablePokemon.specialAttack"/> </li>
-          <li> <Stats nameStat="Special-defense" :value="tablePokemon.specialDefense"/> </li>
-           <li> <Stats nameStat="Speed" :value="tablePokemon.speed"/> </li>
+      <li> <Stats nameStat="Hp" :value="tablePokemon.hp"/></li>
+       <li> <Stats nameStat="Attack" :value="tablePokemon.attack"/></li>
+        <li> <Stats nameStat="Defense" :value="tablePokemon.defense"/></li>
+         <li> <Stats nameStat="Special-attack" :value="tablePokemon.specialAttack"/></li>
+          <li> <Stats nameStat="Special-defense" :value="tablePokemon.specialDefense"/></li>
+           <li> <Stats nameStat="Speed" :value="tablePokemon.speed"/></li>
     </ul>
   </div>
 </section>
@@ -156,4 +157,61 @@ ul {
   list-style: none;
 }
 
+
+.typePokemon {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: white;
+}
+
+.pokemonName {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: white;
+}
+.divHeader {
+  margin-top: 20px;
+}
+
+.height {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.weight {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.ability {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.heightValue {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.weightValue {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.abilityValue {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+body {
+  background: linear-gradient(#e66465, #9198e5);
+}
 </style>
